@@ -5,8 +5,6 @@
  * Version: 0.11.0 - 2014-05-01
  * License: MIT
  */
-angular.module("ui.bootstrap", ["ui.bootstrap.tpls","ui.bootstrap.pagination"]);
-angular.module("ui.bootstrap.tpls", ["template/pagination/pager.html","template/pagination/pagination.html"]);
 angular.module('ui.bootstrap.pagination', [])
 
 .controller('PaginationController', ['$scope', '$attrs', '$parse', function ($scope, $attrs, $parse) {
@@ -242,4 +240,3 @@ angular.module("template/pagination/pagination.html", []).run(["$templateCache",
     "  <li ng-if=\"boundaryLinks\" ng-class=\"{disabled: noNext()}\"><a href ng-click=\"selectPage(totalPages)\">{{getText('last')}}</a></li>\n" +
     "</ul>");
 }]);
-
